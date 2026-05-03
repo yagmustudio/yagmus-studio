@@ -1,14 +1,6 @@
 export default function Hero() {
   return (
     <section className="sparkle-bg relative isolate overflow-hidden px-4 py-28 sm:px-6 sm:py-32 lg:px-8 lg:py-40">
-      <div className="pointer-events-none absolute left-1/2 top-[48%] z-[1] w-[760px] max-w-[90vw] -translate-x-1/2 -translate-y-1/2 opacity-80 ring-2 ring-pink-400">
-        {/* eslint-disable-next-line @next/next/no-img-element -- decorative hero logo; explicit <img> per design */}
-        <img
-          src="/logo-hero.png"
-          alt="YMS logo"
-          className="h-auto w-full drop-shadow-[0_0_90px_rgba(255,79,216,0.75)]"
-        />
-      </div>
       <div className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[28rem] w-[28rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ff4fd8]/36 blur-[140px] sm:h-[36rem] sm:w-[36rem]" />
       <div className="pointer-events-none absolute left-1/2 top-1/2 z-0 h-[22rem] w-[22rem] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#ffc1f0]/22 blur-[120px] sm:h-[28rem] sm:w-[28rem]" />
       <div className="pointer-events-none absolute -top-20 left-[-8%] z-0 h-72 w-72 rounded-full bg-[#ff4fd8]/26 blur-3xl sm:h-96 sm:w-96" />
@@ -17,6 +9,15 @@ export default function Hero() {
       <div className="hero-bubble pointer-events-none left-[8%] top-[54%] z-0 h-7 w-7 sm:h-9 sm:w-9" />
       <div className="hero-bubble pointer-events-none bottom-[18%] right-[28%] z-0 h-6 w-6 sm:h-7 sm:w-7" />
       <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08)_0%,transparent_58%)]" />
+      <div className="pointer-events-none absolute left-1/2 top-[45%] z-[0] w-[760px] h-[400px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-black/30 blur-[80px]" />
+      <div className="pointer-events-none absolute left-1/2 top-[45%] z-[1] w-[720px] max-w-[90vw] -translate-x-1/2 -translate-y-1/2 opacity-100">
+        {/* eslint-disable-next-line @next/next/no-img-element -- decorative hero logo; explicit <img> per design */}
+        <img
+          src="/logo-hero.png"
+          alt="YMS logo"
+          className="h-auto w-full contrast-125 brightness-110 drop-shadow-[0_0_120px_rgba(255,79,216,1)]"
+        />
+      </div>
       <div className="relative z-10 mx-auto w-full max-w-6xl">
         <div className="glitch-accent relative z-10 mx-auto max-w-4xl rounded-[2.25rem] border border-[#c0c0c0]/44 bg-gradient-to-br from-white/14 via-[#ff4fd8]/[0.14] to-white/[0.04] p-7 shadow-[0_0_120px_rgba(255,79,216,0.38)] backdrop-blur-2xl sm:p-11 lg:p-14">
           <div className="pointer-events-none absolute inset-0 rounded-[2.25rem] border border-white/25 [mask-image:linear-gradient(to_bottom,white,transparent)]" />
