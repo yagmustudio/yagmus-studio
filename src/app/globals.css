@@ -211,17 +211,16 @@ body::after {
   }
 }
 
-/* Decorative hero logo: minimal slow float (8–10s) */
-.hero-logo-float {
-  animation: heroLogoFloat 9s ease-in-out infinite;
-}
-
-@keyframes heroLogoFloat {
+@keyframes float-slow {
   0%,
   100% {
-    transform: translateY(0);
+    transform: translateY(0) scale(1.08);
   }
   50% {
-    transform: translateY(-7px);
+    transform: translateY(-14px) scale(1.12);
   }
+}
+
+.animate-float-slow {
+  animation: float-slow 9s ease-in-out infinite;
 }
