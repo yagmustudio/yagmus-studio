@@ -210,3 +210,18 @@ body::after {
     transform: translate(0.2%, 0.2%);
   }
 }
+
+/* Decorative hero logo: minimal slow float (8–10s) */
+.hero-logo-float {
+  animation: heroLogoFloat 9s ease-in-out infinite;
+}
+
+@keyframes heroLogoFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+}

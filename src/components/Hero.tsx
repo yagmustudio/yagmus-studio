@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
     <section className="sparkle-bg relative isolate overflow-hidden px-4 py-28 sm:px-6 sm:py-32 lg:px-8 lg:py-40">
@@ -9,7 +11,28 @@ export default function Hero() {
       <div className="hero-bubble pointer-events-none left-[8%] top-[54%] h-7 w-7 sm:h-9 sm:w-9" />
       <div className="hero-bubble pointer-events-none bottom-[18%] right-[28%] h-6 w-6 sm:h-7 sm:w-7" />
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.08)_0%,transparent_58%)]" />
-      <div className="mx-auto w-full max-w-6xl">
+      <div className="relative mx-auto w-full max-w-6xl">
+        {/* Decorative brand logo behind the hero card — keep readable; content is z-10 */}
+        <div
+          className="pointer-events-none absolute left-1/2 top-[18%] z-0 w-[min(92vw,17rem)] -translate-x-1/2 sm:top-[22%] sm:w-[min(88vw,26rem)] lg:top-[24%] lg:w-[min(90vw,38rem)] xl:w-[min(92vw,42rem)]"
+          aria-hidden
+        >
+          <div className="hero-logo-float relative flex items-center justify-center">
+            <div className="absolute inset-[-18%] rounded-full bg-[#ff4fd8]/30 blur-[48px] sm:bg-[#ff4fd8]/28 sm:blur-[56px]" />
+            <div className="absolute inset-[-8%] rounded-full bg-[#ffc1f0]/15 blur-3xl" />
+            <Image
+              src="/logo-hero.png"
+              alt=""
+              width={1024}
+              height={1024}
+              priority
+              className="relative h-auto w-full scale-[1.12] opacity-[0.18] blur-xl sm:scale-[1.18] sm:opacity-[0.22] sm:blur-2xl lg:scale-[1.22] lg:opacity-[0.25]"
+              sizes="(max-width: 640px) 272px, (max-width: 1024px) 416px, 608px"
+            />
+          </div>
+        </div>
+
+        <div className="relative z-10">
         <div className="glitch-accent relative mx-auto max-w-4xl rounded-[2.25rem] border border-[#c0c0c0]/44 bg-gradient-to-br from-white/14 via-[#ff4fd8]/[0.14] to-white/[0.04] p-7 shadow-[0_0_120px_rgba(255,79,216,0.38)] backdrop-blur-2xl sm:p-11 lg:p-14">
           <div className="pointer-events-none absolute inset-0 rounded-[2.25rem] border border-white/25 [mask-image:linear-gradient(to_bottom,white,transparent)]" />
           <div className="pointer-events-none absolute left-8 right-8 top-0 h-px bg-gradient-to-r from-transparent via-[#c0c0c0]/85 to-transparent" />
@@ -36,6 +59,7 @@ export default function Hero() {
               Contact
             </a>
           </div>
+        </div>
         </div>
       </div>
     </section>
