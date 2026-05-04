@@ -14,7 +14,11 @@ export default function Home() {
       <main className="relative z-10">
         <Hero />
 
-        <section id="work" className="section-work px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
+        <section
+          id="work"
+          className="section-work relative -mt-8 px-4 pb-20 pt-14 sm:-mt-10 sm:px-6 sm:pb-24 sm:pt-16 lg:-mt-12 lg:px-8 lg:pb-24 lg:pt-18"
+        >
+          <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-[#ff4fd8]/10 to-transparent" />
           <div className="relative z-10 mx-auto w-full max-w-6xl">
             <div className="mb-10">
               <h2 className="text-3xl font-semibold tracking-tight text-[#f8f8ff] sm:text-4xl">
