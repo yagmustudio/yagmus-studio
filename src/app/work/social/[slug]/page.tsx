@@ -59,24 +59,30 @@ export default async function SocialProjectPage({ params }: SocialProjectPagePro
         </p>
         <p className="mt-2 text-sm text-[#f8f8ff]/75 sm:text-base">{project.description}</p>
 
-        <div className="mt-8 overflow-hidden rounded-3xl border border-white/10 bg-black/20 p-2">
-          <div className="aspect-[16/9]">
-            <ProjectImage
-              src={project.coverImage}
-              alt={`${project.company} project cover`}
-              label={project.company}
-            />
-          </div>
-        </div>
+        {project.slug !== "other-projects" ? (
+  <div className="mt-8 overflow-hidden rounded-3xl border border-white/10 bg-black/20 p-2">
+    <div className="aspect-[6/5]">
+      <ProjectImage
+        src={project.coverImage}
+        alt={`${project.company} project cover`}
+        label={project.company}
+      />
+    </div>
+  </div>
+) : null}
       </section>
 
       <section className="mt-8">
         <h2 className="text-2xl font-semibold text-[#f8f8ff]">Gallery</h2>
         <p className="mt-2 text-sm text-[#f8f8ff]/70">
-          Replace these image paths with your exported post designs in `public/images/social`.
+        Selected social media content and visual communication works.
         </p>
         <div className="mt-5">
-          <ProjectGallery company={project.company} images={project.galleryImages} />
+        <ProjectGallery
+  company={project.company}
+  images={project.galleryImages}
+  isBanner={project.slug === "other-projects"}
+/>
         </div>
       </section>
     </main>

@@ -8,11 +8,18 @@ export default function About() {
           <h2 className="text-3xl font-semibold tracking-tight text-[#f8f8ff] sm:text-4xl">
             About
           </h2>
-          <p className="mt-5 max-w-4xl text-sm leading-relaxed text-[#f8f8ff]/80 sm:text-base">
-            I&apos;m Yağmur, a software engineering student interested in iOS development, web
-            design, and digital content creation. I currently design social media visuals for
-            corporate brands while building my own apps and web projects.
-          </p>
+          <p className="mt-5 space-y-4 max-w-4xl text-sm leading-relaxed text-[#f8f8ff]/80 sm:text-base">
+          I’m Yağmur Gökaydınoğlu, a third-year Software Engineering student at Istanbul Okan University, 
+focused on building digital experiences that combine technology and design.</p>
+
+<p className="mt-5 space-y-4">My interests include iOS development, backend systems, web interfaces, and brand-oriented visual content. 
+
+  Alongside creating social media designs for corporate clients, I also completed a backend development 
+  internship at VakıfBank Headquarters, where I gained experience in enterprise software environments 
+  and collaborative product development.</p>
+
+<p className="mt-5 space-y-4">I enjoy blending logic with visual storytelling — creating products that are both functional and aesthetically refined.</p>
+
           <div className="mt-9 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {focusAreas.map((area) => (
               <article

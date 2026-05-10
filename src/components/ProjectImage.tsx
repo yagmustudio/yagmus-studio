@@ -39,7 +39,7 @@ export default function ProjectImage({
       alt={alt}
       width={1400}
       height={1400}
-      className={`h-full w-full rounded-2xl object-cover ${className ?? ""}`}
+      className={`h-full w-full rounded-2xl object-contain ${className ?? ""}`}
       onError={() => setFailed(true)}
     />
   );
